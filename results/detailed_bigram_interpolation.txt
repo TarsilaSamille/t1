@@ -1,0 +1,47 @@
+Modelo: bigram, Smoothing: interpolation
+============================================================
+
+DESENVOLVIMENTO
+============================================================
+Modelo carregado de tagger_bigram_interpolation.pkl
+Avaliando modelo bigram no arquivo: Secs19-21
+Acurácia do modelo bigram: 0.9392 (109136/116199)
+Acurácia final: 0.9392
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         656       
+CD         NN         443       
+NN         JJ         372       
+VBN        VBD        369       
+NN         NNP        312       
+VBD        VBN        288       
+WDT        IN         248       
+JJ         NNP        242       
+RB         IN         237       
+VBP        VB         158       
+Resultados detalhados salvos em results_bigram_interpolation.txt
+
+
+TESTE FINAL
+============================================================
+Modelo carregado de tagger_bigram_interpolation.pkl
+Avaliando modelo bigram no arquivo: Secs22-24
+Acurácia do modelo bigram: 0.9391 (107201/114153)
+Acurácia final: 0.9391
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         614       
+CD         NN         399       
+VBN        VBD        353       
+RB         IN         342       
+VBD        VBN        325       
+NN         JJ         295       
+NNP        NNPS       261       
+WDT        IN         251       
+JJ         NNP        204       
+NN         NNP        195       
+Resultados detalhados salvos em results_bigram_interpolation.txt

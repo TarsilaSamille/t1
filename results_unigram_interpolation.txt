@@ -1,0 +1,26 @@
+Modelo: unigram, Smoothing: interpolation
+Acurácia: 0.9202
+
+Matriz de Confusão (Top 20):
+Gold Tag   Pred Tag   Count     
+------------------------------
+VBD        VBN        613       
+VBN        VBD        581       
+VB         NN         577       
+JJ         NN         537       
+CD         NN         398       
+VB         VBP        375       
+NN         JJ         336       
+RB         IN         335       
+VBP        VB         283       
+NN         VB         279       
+WDT        IN         271       
+NNP        NNPS       247       
+NN         VBG        192       
+JJ         NNP        185       
+RBR        JJR        183       
+RB         JJ         181       
+VBZ        NNS        175       
+VBZ        POS        165       
+NN         NNP        161       
+DT         IN         158       

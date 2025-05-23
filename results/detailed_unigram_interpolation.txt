@@ -1,0 +1,47 @@
+Modelo: unigram, Smoothing: interpolation
+============================================================
+
+DESENVOLVIMENTO
+============================================================
+Modelo carregado de tagger_unigram_interpolation.pkl
+Avaliando modelo unigram no arquivo: Secs19-21
+Acurácia do modelo unigram: 0.9208 (107000/116199)
+Acurácia final: 0.9208
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+VBD        VBN        649       
+VB         NN         630       
+JJ         NN         606       
+VBN        VBD        599       
+CD         NN         442       
+NN         JJ         394       
+VB         VBP        355       
+VBP        VB         299       
+NN         NNP        291       
+NN         VB         281       
+Resultados detalhados salvos em results_unigram_interpolation.txt
+
+
+TESTE FINAL
+============================================================
+Modelo carregado de tagger_unigram_interpolation.pkl
+Avaliando modelo unigram no arquivo: Secs22-24
+Acurácia do modelo unigram: 0.9202 (105046/114153)
+Acurácia final: 0.9202
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+VBD        VBN        613       
+VBN        VBD        581       
+VB         NN         577       
+JJ         NN         537       
+CD         NN         398       
+VB         VBP        375       
+NN         JJ         336       
+RB         IN         335       
+VBP        VB         283       
+NN         VB         279       
+Resultados detalhados salvos em results_unigram_interpolation.txt

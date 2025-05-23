@@ -1,0 +1,47 @@
+Modelo: bigram, Smoothing: none
+============================================================
+
+DESENVOLVIMENTO
+============================================================
+Modelo carregado de tagger_bigram_none.pkl
+Avaliando modelo bigram no arquivo: Secs19-21
+Acurácia do modelo bigram: 0.9384 (109038/116199)
+Acurácia final: 0.9384
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         662       
+NN         JJ         364       
+VBN        VBD        349       
+NN         NNP        346       
+VBD        VBN        285       
+WDT        IN         248       
+CD         JJ         229       
+JJ         NNP        224       
+RB         IN         220       
+CD         NN         184       
+Resultados detalhados salvos em results_bigram_none.txt
+
+
+TESTE FINAL
+============================================================
+Modelo carregado de tagger_bigram_none.pkl
+Avaliando modelo bigram no arquivo: Secs22-24
+Acurácia do modelo bigram: 0.9387 (107153/114153)
+Acurácia final: 0.9387
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         616       
+VBD        VBN        332       
+VBN        VBD        322       
+RB         IN         311       
+NN         JJ         287       
+NNP        NNPS       260       
+WDT        IN         251       
+NN         NNP        227       
+CD         NN         209       
+JJ         NNP        204       
+Resultados detalhados salvos em results_bigram_none.txt

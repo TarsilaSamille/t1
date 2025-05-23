@@ -1,0 +1,47 @@
+Modelo: trigram, Smoothing: interpolation
+============================================================
+
+DESENVOLVIMENTO
+============================================================
+Modelo carregado de tagger_trigram_interpolation.pkl
+Avaliando modelo trigram no arquivo: Secs19-21
+Acurácia do modelo trigram: 0.9417 (109424/116199)
+Acurácia final: 0.9417
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         668       
+CD         NN         434       
+NN         JJ         369       
+VBN        VBD        324       
+NN         NNP        312       
+WDT        IN         246       
+RB         IN         234       
+JJ         NNP        232       
+VBD        VBN        214       
+RB         JJ         139       
+Resultados detalhados salvos em results_trigram_interpolation.txt
+
+
+TESTE FINAL
+============================================================
+Modelo carregado de tagger_trigram_interpolation.pkl
+Avaliando modelo trigram no arquivo: Secs22-24
+Acurácia do modelo trigram: 0.9413 (107456/114153)
+Acurácia final: 0.9413
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         627       
+CD         NN         383       
+RB         IN         339       
+VBN        VBD        303       
+NN         JJ         293       
+NNP        NNPS       270       
+VBD        VBN        255       
+WDT        IN         249       
+JJ         NNP        203       
+NN         NNP        195       
+Resultados detalhados salvos em results_trigram_interpolation.txt

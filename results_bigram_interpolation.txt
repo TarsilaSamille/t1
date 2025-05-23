@@ -1,0 +1,26 @@
+Modelo: bigram, Smoothing: interpolation
+Acurácia: 0.9391
+
+Matriz de Confusão (Top 20):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         614       
+CD         NN         399       
+VBN        VBD        353       
+RB         IN         342       
+VBD        VBN        325       
+NN         JJ         295       
+NNP        NNPS       261       
+WDT        IN         251       
+JJ         NNP        204       
+NN         NNP        195       
+RBR        JJR        162       
+VB         NN         156       
+RB         JJ         146       
+NNP        JJ         142       
+VBG        NN         129       
+VBZ        NNS        124       
+VBN        JJ         119       
+IN         RB         118       
+VBP        VB         116       
+NN         VBG        114       

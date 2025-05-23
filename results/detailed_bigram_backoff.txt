@@ -1,0 +1,47 @@
+Modelo: bigram, Smoothing: backoff
+============================================================
+
+DESENVOLVIMENTO
+============================================================
+Modelo carregado de tagger_bigram_backoff.pkl
+Avaliando modelo bigram no arquivo: Secs19-21
+Acurácia do modelo bigram: 0.9309 (108171/116199)
+Acurácia final: 0.9309
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         661       
+CD         NN         411       
+NN         JJ         362       
+VBN        VBD        353       
+NN         NNP        347       
+VBD        VBN        287       
+WDT        IN         248       
+DT         SYM        234       
+JJ         NNP        223       
+RB         IN         219       
+Resultados detalhados salvos em results_bigram_backoff.txt
+
+
+TESTE FINAL
+============================================================
+Modelo carregado de tagger_bigram_backoff.pkl
+Avaliando modelo bigram no arquivo: Secs22-24
+Acurácia do modelo bigram: 0.9309 (106264/114153)
+Acurácia final: 0.9309
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         619       
+CD         NN         367       
+VBD        VBN        332       
+VBN        VBD        324       
+RB         IN         309       
+NN         JJ         285       
+NNP        NNPS       260       
+WDT        IN         251       
+NN         NNP        226       
+DT         SYM        211       
+Resultados detalhados salvos em results_bigram_backoff.txt

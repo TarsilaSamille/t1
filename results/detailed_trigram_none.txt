@@ -1,0 +1,47 @@
+Modelo: trigram, Smoothing: none
+============================================================
+
+DESENVOLVIMENTO
+============================================================
+Modelo carregado de tagger_trigram_none.pkl
+Avaliando modelo trigram no arquivo: Secs19-21
+Acurácia do modelo trigram: 0.9395 (109167/116199)
+Acurácia final: 0.9395
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         643       
+NN         JJ         372       
+VBN        VBD        287       
+CD         NN         285       
+NN         NNP        285       
+WDT        IN         247       
+RB         IN         222       
+VBD        VBN        210       
+JJ         NNP        207       
+IN         RB         177       
+Resultados detalhados salvos em results_trigram_none.txt
+
+
+TESTE FINAL
+============================================================
+Modelo carregado de tagger_trigram_none.pkl
+Avaliando modelo trigram no arquivo: Secs22-24
+Acurácia do modelo trigram: 0.9401 (107319/114153)
+Acurácia final: 0.9401
+
+Matriz de Confusão (Top 10):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         616       
+RB         IN         308       
+NN         JJ         294       
+CD         NN         287       
+VBN        VBD        267       
+NNP        NNPS       262       
+WDT        IN         259       
+VBD        VBN        249       
+JJ         NNP        187       
+VBN        JJ         183       
+Resultados detalhados salvos em results_trigram_none.txt

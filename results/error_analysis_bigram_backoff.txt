@@ -1,0 +1,70 @@
+ANÁLISE DE ERROS COMUNS - bigram_backoff
+============================================================
+
+Acurácia geral: 0.9309
+
+Top 20 Erros Mais Frequentes:
+------------------------------------------------------------
+Gold Tag   Pred Tag   Count     
+------------------------------------------------------------
+JJ         NN         661       
+CD         NN         411       
+NN         JJ         362       
+VBN        VBD        353       
+NN         NNP        347       
+VBD        VBN        287       
+WDT        IN         248       
+DT         SYM        234       
+JJ         NNP        223       
+RB         IN         219       
+
+
+Erros por Categoria de Tag:
+------------------------------------------------------------
+Tag        Total      Errors     Error Rate
+------------------------------------------------------------
+JJ         1503       884        0.5882
+NN         1220       709        0.5811
+CD         778        411        0.5283
+DT         445        234        0.5258
+VBN        677        353        0.5214
+WDT        499        248        0.4970
+VBD        619        287        0.4637
+RB         528        219        0.4148
+
+
+Pares de Tags Frequentemente Confundidos:
+------------------------------------------------------------
+Tag1       Tag2       Count1to2  Count2to1  Total     
+------------------------------------------------------------
+JJ         NN         661        362        1023      
+VBN        VBD        353        287        640       
+CD         NN         411        0          411       
+NN         NNP        347        0          347       
+WDT        IN         248        0          248       
+DT         SYM        234        0          234       
+JJ         NNP        223        0          223       
+RB         IN         219        0          219       
+
+
+RECOMENDAÇÕES PARA MELHORIAS:
+------------------------------------------------------------
+1. Foco nas tags com maiores taxas de erro:
+   - JJ: Taxa de erro de 0.5882
+   - NN: Taxa de erro de 0.5811
+   - CD: Taxa de erro de 0.5283
+   - DT: Taxa de erro de 0.5258
+   - VBN: Taxa de erro de 0.5214
+
+2. Melhorar a distinção entre pares frequentemente confundidos:
+   - JJ e NN: 1023 confusões
+   - VBN e VBD: 640 confusões
+   - CD e NN: 411 confusões
+   - NN e NNP: 347 confusões
+   - WDT e IN: 248 confusões
+
+3. Recomendações gerais:
+   - Considerar features adicionais para melhorar a distinção de tags problemáticas
+   - Usar técnicas de smoothing mais avançadas
+   - Experimentar com janelas de contexto maiores
+   - Melhorar o tratamento de palavras desconhecidas

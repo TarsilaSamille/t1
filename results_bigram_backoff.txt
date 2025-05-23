@@ -1,0 +1,26 @@
+Modelo: bigram, Smoothing: backoff
+Acurácia: 0.9309
+
+Matriz de Confusão (Top 20):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         619       
+CD         NN         367       
+VBD        VBN        332       
+VBN        VBD        324       
+RB         IN         309       
+NN         JJ         285       
+NNP        NNPS       260       
+WDT        IN         251       
+NN         NNP        226       
+DT         SYM        211       
+JJ         NNP        205       
+DT         LS         205       
+CD         LS         162       
+VBN        JJ         159       
+IN         RB         151       
+RBR        JJR        149       
+NNP        JJ         147       
+NNP        NN         145       
+RB         RP         132       
+VBG        NN         120       

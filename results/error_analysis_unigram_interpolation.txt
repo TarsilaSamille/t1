@@ -1,0 +1,67 @@
+ANÁLISE DE ERROS COMUNS - unigram_interpolation
+============================================================
+
+Acurácia geral: 0.9208
+
+Top 20 Erros Mais Frequentes:
+------------------------------------------------------------
+Gold Tag   Pred Tag   Count     
+------------------------------------------------------------
+VBD        VBN        649       
+VB         NN         630       
+JJ         NN         606       
+VBN        VBD        599       
+CD         NN         442       
+NN         JJ         394       
+VB         VBP        355       
+VBP        VB         299       
+NN         NNP        291       
+NN         VB         281       
+
+
+Erros por Categoria de Tag:
+------------------------------------------------------------
+Tag        Total      Errors     Error Rate
+------------------------------------------------------------
+NN         1581       966        0.6110
+JJ         1143       606        0.5302
+CD         840        442        0.5262
+VBD        1262       649        0.5143
+VBP        582        299        0.5137
+VB         1937       985        0.5085
+VBN        1180       599        0.5076
+
+
+Pares de Tags Frequentemente Confundidos:
+------------------------------------------------------------
+Tag1       Tag2       Count1to2  Count2to1  Total     
+------------------------------------------------------------
+VBD        VBN        649        599        1248      
+JJ         NN         606        394        1000      
+VB         NN         630        281        911       
+VB         VBP        355        299        654       
+CD         NN         442        0          442       
+NN         NNP        291        0          291       
+
+
+RECOMENDAÇÕES PARA MELHORIAS:
+------------------------------------------------------------
+1. Foco nas tags com maiores taxas de erro:
+   - NN: Taxa de erro de 0.6110
+   - JJ: Taxa de erro de 0.5302
+   - CD: Taxa de erro de 0.5262
+   - VBD: Taxa de erro de 0.5143
+   - VBP: Taxa de erro de 0.5137
+
+2. Melhorar a distinção entre pares frequentemente confundidos:
+   - VBD e VBN: 1248 confusões
+   - JJ e NN: 1000 confusões
+   - VB e NN: 911 confusões
+   - VB e VBP: 654 confusões
+   - CD e NN: 442 confusões
+
+3. Recomendações gerais:
+   - Considerar features adicionais para melhorar a distinção de tags problemáticas
+   - Usar técnicas de smoothing mais avançadas
+   - Experimentar com janelas de contexto maiores
+   - Melhorar o tratamento de palavras desconhecidas

@@ -1,0 +1,63 @@
+RELATÓRIO DE EXPERIMENTOS POS TAGGER
+Data: 22/05/2025 23:47:05
+============================================================
+
+RESUMO DE ACURÁCIA
+
+Conjunto de Desenvolvimento:
+------------------------------------------------------------
+Modelo     Smoothing       Acurácia  
+------------------------------------------------------------
+unigram    backoff         0.9208
+unigram    interpolation   0.9208
+unigram    none            0.9208
+bigram     backoff         0.9309
+bigram     interpolation   0.9392
+bigram     none            0.9384
+trigram    backoff         0.9404
+trigram    interpolation   0.9417
+trigram    none            0.9395
+
+Conjunto de Teste:
+------------------------------------------------------------
+Modelo     Smoothing       Acurácia  
+------------------------------------------------------------
+unigram    backoff         0.9202
+unigram    interpolation   0.9202
+unigram    none            0.9202
+bigram     backoff         0.9309
+bigram     interpolation   0.9391
+bigram     none            0.9387
+trigram    backoff         0.9408
+trigram    interpolation   0.9413
+trigram    none            0.9401
+
+MELHOR MODELO: trigram com smoothing interpolation
+Acurácia no teste: 0.9413
+
+ANÁLISE DE RESULTADOS
+------------------------------------------------------------
+
+Comparação de Modelos:
+
+Dataset: dev
+Média de acurácia para modelo unigram: 0.9208
+Média de acurácia para modelo bigram: 0.9362
+Média de acurácia para modelo trigram: 0.9405
+
+Dataset: test
+Média de acurácia para modelo unigram: 0.9202
+Média de acurácia para modelo bigram: 0.9362
+Média de acurácia para modelo trigram: 0.9407
+
+Comparação de Métodos de Smoothing:
+
+Dataset: dev
+Média de acurácia para smoothing backoff: 0.9307
+Média de acurácia para smoothing interpolation: 0.9339
+Média de acurácia para smoothing none: 0.9329
+
+Dataset: test
+Média de acurácia para smoothing backoff: 0.9306
+Média de acurácia para smoothing interpolation: 0.9335
+Média de acurácia para smoothing none: 0.9330

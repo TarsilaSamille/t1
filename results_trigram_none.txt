@@ -1,0 +1,26 @@
+Modelo: trigram, Smoothing: none
+Acurácia: 0.9401
+
+Matriz de Confusão (Top 20):
+Gold Tag   Pred Tag   Count     
+------------------------------
+JJ         NN         616       
+RB         IN         308       
+NN         JJ         294       
+CD         NN         287       
+VBN        VBD        267       
+NNP        NNPS       262       
+WDT        IN         259       
+VBD        VBN        249       
+JJ         NNP        187       
+VBN        JJ         183       
+NN         NNP        168       
+NNP        JJ         159       
+IN         RB         153       
+NNP        NN         143       
+VBG        NN         131       
+RBR        JJR        123       
+NN         VBG        118       
+RB         JJ         115       
+RB         RP         108       
+VBZ        NNS        108       

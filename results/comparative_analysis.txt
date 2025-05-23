@@ -1,0 +1,44 @@
+ANÁLISE COMPARATIVA DE MODELOS POS TAGGER
+============================================================
+
+COMPARAÇÃO DE ACURÁCIAS:
+------------------------------------------------------------
+Modelo               Tipo       Smoothing       Acurácia  
+------------------------------------------------------------
+trigram_interpolation trigram    interpolation   0.9413
+trigram_backoff      trigram    backoff         0.9408
+trigram_none         trigram    none            0.9401
+bigram_interpolation bigram     interpolation   0.9391
+bigram_none          bigram     none            0.9387
+bigram_backoff       bigram     backoff         0.9309
+unigram_backoff      unigram    backoff         0.9202
+unigram_interpolation unigram    interpolation   0.9202
+unigram_none         unigram    none            0.9202
+
+
+ANÁLISE DE TENDÊNCIAS:
+------------------------------------------------------------
+1. Impacto do Tipo de Modelo:
+   - trigram: Acurácia média de 0.9407
+   - bigram: Acurácia média de 0.9362
+   - unigram: Acurácia média de 0.9202
+
+2. Impacto do Método de Smoothing:
+   - interpolation: Acurácia média de 0.9335
+   - backoff: Acurácia média de 0.9306
+   - none: Acurácia média de 0.9330
+
+
+CONCLUSÕES:
+------------------------------------------------------------
+1. Melhor modelo: trigram_interpolation com acurácia de 0.9413
+
+2. Modelos do tipo trigram tiveram o melhor desempenho médio (0.9407)
+
+3. O método de smoothing interpolation teve o melhor desempenho médio (0.9335)
+
+4. Recomendações para melhoria:
+   - Use modelos de tipo trigram
+   - Prefira smoothing do tipo interpolation
+   - Para melhorar o desempenho geral, explore features adicionais
+   - Considere técnicas de smoothing mais avançadas
