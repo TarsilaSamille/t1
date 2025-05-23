@@ -1,29 +1,75 @@
-Fazer um part-of-speech tagger (PoS-tagger) e fazer um relatório, inclusive reportando resultados de testes
-As três fases do desenvolvimento (no PTB) são:
+# Etiquetador Morfossintático (POS Tagger) para o Penn Treebank
 
-Treino (usando o corpus de treino; no caso do Penn Treebank usar Seções 0-18);
-Teste de desenvolvimento ou validação (usando o corpus de desenvolvimento, validação ou heldout; no caso do Penn Treebank usar Seções 19-21);
-Avaliação final (usando o corpus de teste final; no caso do Penn Treebank usar Seções 22-24).
-Tipicamente as fases 1 e 2 são repetidas várias vezes quando existem parâmetros que podem ser corrigidos ou ajustados e os resultados dos testes de desenvolvimento podem ser analisados em detalhe comparando com o "gold-standard" ("ground-truth") para melhorar o modelo.
+Este projeto implementa um etiquetador morfossintático (Part-of-Speech Tagger) para o corpus Penn Treebank, com várias abordagens e técnicas de suavização (smoothing). O sistema classifica automaticamente cada palavra de um texto com sua classe gramatical correspondente.
 
-O corpus de teste final não pode ser usado para melhorar o modelo, apenas para reportar resultados do modelo.
+## Estrutura do Projeto
 
-O teste básico de uma tarefa de classificação, como é o caso de um part-of-speech tagger é a acurácia, ou taxa de acerto (ou taxa de erro), que consiste simplesmente na divisão do número de tokens classificados corretamente pelo número total de tokens submetido à classificação.
+```
+├── pos_tagger.py           # Implementação principal do POS Tagger
+├── run_experiments.py      # Script para executar todos os experimentos
+├── analyze_errors.py       # Análise de erros do modelo
+├── convert_to_evalb.py     # Utilitário para conversão para formato evalb
+├── Secs0-18                # Corpus de treino (Penn Treebank Seções 0-18)
+├── Secs19-21               # Corpus de desenvolvimento (Penn Treebank Seções 19-21)
+├── Secs22-24               # Corpus de teste final (Penn Treebank Seções 22-24)
+├── results/                # Diretório com resultados e análises detalhadas
+```
 
-O relatório também deverá apresentar a "confusion matrix" ou matriz de contingência do teste. Esta matriz, na verdade é muito útil para análise dos testes de desenvolvimento, para dar uma visão geral dos casos em que o algoritmo está tendo mais problemas. A análise individual por sentenças, utilizando por exemplo tgrep, é bem mais trabalhosa.
+## Modelos Implementados
 
-======
+Este projeto implementa três tipos principais de modelos de etiquetagem:
 
-Algumas estratégias:
+1. **Unigrama (Baseline)**: Para cada palavra, usa a tag mais frequente observada no corpus de treino.
+2. **Bigrama**: Considera a tag da palavra anterior para decidir a tag atual.
+3. **Trigrama**: Considera as tags das duas palavras anteriores para decidir a tag atual.
 
-"Baseline": Para cada palavra usar a tag que aparece com maior frequência para aquela palavra no corpus (unigrama).
-Experimentar com bigramas e trigramas
-Modelar palavra desconhecida através das palavras que aparecem poucas vezes no corpus de treino (1 vez, até 5 vezes, etc.)
-Experimentar condicionar com tag(s) da(s) palavra(s) anteriores (processando da esquerda para a direita)
-Experimentar com alguns tipos de smoothing (e.g., backof, interpolação, criativo ...)
-Nota 1: Não esqueça de considerar tokens para BOS e EOS
-Nota 2: A tag dos BOS/EOS não deve ser contabilizada para avaliação
-Nota 3: Também é convenção não contabilizada tags de pontuação para avaliação
-Nota 4: Pode se usar o "evalb" para avaliação de acurácia de pos-tagging, convertendo-se a saída para algo como
-(S (tag1 word1) (tag2 word2) (tag3 word3) ... (tagn wordn) )
-Nota 5: Para testar com sentenças de fora do corpus tem-se que assumir o uso de um tokenizador "compatível" para gerar a entrada. (DISCUTIR)
+## Métodos de Suavização (Smoothing)
+
+Para lidar com o problema de esparsidade de dados, três abordagens de suavização foram implementadas:
+
+1. **Backoff**: Recorre a um modelo mais simples quando não há dados suficientes.
+2. **Interpolação**: Combina as probabilidades de diferentes modelos com pesos.
+3. **Sem Suavização (None)**: Modelo sem técnicas de suavização para comparação.
+
+## Tratamento de Palavras Desconhecidas
+
+O sistema lida com palavras desconhecidas modelando-as através das palavras que aparecem com baixa frequência no corpus de treino (palavras raras).
+
+## Resultados
+
+Após avaliação extensiva, os resultados mostram que:
+
+- O **modelo trigrama com interpolação** alcançou a melhor acurácia (94,13%)
+- Os modelos do tipo trigrama tiveram o melhor desempenho médio (94,07%)
+- O método de suavização por interpolação teve o melhor desempenho médio (93,35%)
+
+As análises detalhadas, incluindo matrizes de confusão e análises de erros, estão disponíveis no diretório `results/`.
+
+## Execução de Experimentos
+
+Para executar todos os experimentos definidos:
+
+```bash
+python run_experiments.py
+```
+
+## Avaliação
+
+A avaliação é baseada principalmente na acurácia (taxa de acerto), que é calculada como a divisão do número de tokens classificados corretamente pelo número total de tokens. Seguindo convenções padrão:
+
+- Tags de pontuação não são contabilizadas na avaliação
+- Tags de BOS/EOS (início/fim de sentença) não são contabilizadas
+
+## Visualizações
+
+O projeto inclui várias visualizações para análise de resultados:
+
+- Matrizes de confusão para cada modelo
+- Gráficos comparativos de acurácia entre modelos
+- Análises detalhadas de erros mais comuns
+
+## Conclusões
+
+- Modelos de ordem superior (trigramas) fornecem melhores resultados, confirmando a importância do contexto para a tarefa de POS tagging
+- A suavização por interpolação provou ser mais eficaz, especialmente para lidar com casos raros
+- O tratamento adequado de palavras desconhecidas é crucial para o desempenho em textos reais
